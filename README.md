@@ -1,6 +1,6 @@
-# Stacktrace [![Circle CI](https://img.shields.io/circleci/project/palantir/stacktrace/master.svg?label=circleci)](https://circleci.com/gh/palantir/stacktrace) [![Travis CI](https://img.shields.io/travis/palantir/stacktrace/master.svg?label=travis)](https://travis-ci.org/palantir/stacktrace)
+# Stacktrace
 
-**FORK NOTE:** We (Kurtosis) forked the original library because [this issue](https://github.com/palantir/stacktrace/issues/8) was costing us significant engineering time and there hadn't been any commits to the repo in 6 years.
+**FORK NOTE:** We (Kurtosis) forked the original Palantir library because [this issue](https://github.com/palantir/stacktrace/issues/8) was costing us significant engineering time and there hadn't been any commits to the repo in 6 years.
 
 Look at Palantir, such a Java shop. I can't believe they want stack traces in
 their Go code.
