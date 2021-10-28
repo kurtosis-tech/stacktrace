@@ -78,13 +78,11 @@ included in an error, msg can be an empty string:
 		return stacktrace.Propagate(err, "")
 	}
 
-If cause is nil, Propagate returns nil. This allows elision of some "if err !=
-nil" checks.
+If cause is nil, Propagate panics.
 */
 func Propagate(cause error, msg string, vals ...interface{}) error {
 	if cause == nil {
-		// Allow calling Propagate without checking whether there is error
-		return nil
+		panic("Propagate must be provided with a cause")
 	}
 	return create(cause, NoCode, msg, vals...)
 }
@@ -131,8 +129,7 @@ PropagateWithCode is similar to Propagate but also attaches an error code.
 */
 func PropagateWithCode(cause error, code ErrorCode, msg string, vals ...interface{}) error {
 	if cause == nil {
-		// Allow calling PropagateWithCode without checking whether there is error
-		return nil
+		panic("PropagateWithCode must be provided with a cause")
 	}
 	return create(cause, code, msg, vals...)
 }
